@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'PPGoshaSans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('./assets/fonts/PPGoshaSans-Regular.woff2');
+  }
+  @font-face {
+    font-family: 'PPGoshaSans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url('./assets/fonts/PPGoshaSans-Bold.woff2');
+  }
+  html {
+    @apply font-gosha text-white bg-black;
+  }
+  nav {
+    @apply text-[6.25rem];
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    @apply text-black transition-colors duration-300;
+    -webkit-text-stroke: 1px white;
+  }
+}
