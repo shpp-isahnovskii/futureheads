@@ -4,7 +4,7 @@ import HamburgerMenu from '@/components/Header/HamburgerMenu';
 const HeaderComponent = () => {
   return (
     <>
-      <header className="flex justify-between px-11 pt-12">
+      <header className="absolute w-full flex justify-between px-11 top-12">
         <CompanyBrand />
         <HamburgerMenu />
       </header>

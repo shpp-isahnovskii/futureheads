@@ -1,0 +1,151 @@
+.text-animation--glitch:before {
+  @apply absolute left-[-2px] content-[attr(inner-text)];
+  text-shadow: -2px 0 blue;
+  animation: 4s linear 2s infinite alternate both running glitch-it-before;
+}
+.text-animation--glitch:after {
+  @apply absolute left-[2px] content-[attr(inner-text)];
+  text-shadow: 2px 0 red;
+  animation: 4s linear 2s infinite alternate both running glitch-it-after;
+}
+
+@keyframes glitch-it-before {
+  0% {
+      clip: rect(93px, 824px, 19px, 0px);
+      opacity: 0;
+  }
+
+  1.5% {
+      clip: rect(82px, 824px, 103px, 0px);
+      opacity: 1;
+  }
+
+  3.3% {
+      clip: rect(102px, 824px, 95px, 0px);
+      opacity: 1;
+  }
+
+  5% {
+      clip: rect(23px, 824px, 37px, 0px);
+      opacity: 1;
+  }
+
+  6.7% {
+      clip: rect(90px, 824px, 14px, 0px);
+      opacity: 1;
+  }
+
+  7.5% {
+      clip: rect(103px, 824px, 71px, 0px);
+      opacity: 1;
+  }
+
+  10% {
+      clip: rect(24px, 824px, 65px, 0px);
+      opacity: 1;
+  }
+
+  11.7% {
+      clip: rect(13px, 824px, 21px, 0px);
+      opacity: 1;
+  }
+
+  13.3% {
+      clip: rect(100px, 824px, 59px, 0px);
+      opacity: 1;
+  }
+
+  15% {
+      clip: rect(31px, 824px, 107px, 0px);
+      opacity: 1;
+  }
+
+  16.7% {
+      clip: rect(105px, 824px, 111px, 0px);
+      opacity: 1;
+  }
+
+  13.3% {
+      clip: rect(42px, 824px, 110px, 0px);
+      opacity: 1;
+  }
+
+  20% {
+      clip: rect(113px, 824px, 113px, 0px);
+      opacity: 1;
+  }
+
+  21.7% {
+      clip: rect(65px, 824px, 80px, 0px);
+      opacity: 1;
+  }
+
+  23.3% {
+      clip: rect(36px, 824px, 112px, 0px);
+      opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch-it-after {
+  0% {
+      clip: rect(38px, 824px, 87px, 0px);
+      opacity: 0;
+  }
+
+  2.5% {
+      clip: rect(89px, 824px, 26px, 0px);
+      opacity: 1;
+  }
+
+  5% {
+      clip: rect(64px, 824px, 50px, 0px);
+      opacity: 1;
+  }
+
+  7.5% {
+      clip: rect(8px, 824px, 10px, 0px);
+      opacity: 1;
+  }
+
+  10% {
+      clip: rect(33px, 824px, 97px, 0px);
+      opacity: 1;
+  }
+
+  12.5% {
+      clip: rect(105px, 824px, 78px, 0px);
+      opacity: 1;
+  }
+
+  15% {
+      clip: rect(42px, 824px, 60px, 0px);
+      opacity: 1;
+  }
+
+  17.5% {
+      clip: rect(101px, 824px, 28px, 0px);
+      opacity: 1;
+  }
+
+  20% {
+      clip: rect(22px, 824px, 55px, 0px);
+      opacity: 1;
+  }
+
+  22.5% {
+      clip: rect(47px, 824px, 95px, 0px);
+      opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

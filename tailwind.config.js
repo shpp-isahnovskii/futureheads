@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         gosha: ['PPGoshaSans', 'Verdana', 'Arial', 'sans-serif'],
       },
+      screens: {
+        '3xl': '1800px',
+      },
     },
   },
   plugins: [],

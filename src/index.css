@@ -23,6 +23,15 @@
   nav {
     @apply text-[6.25rem];
   }
+  h1 {
+    @apply typo-h1;
+  }
+}
+
+@layer components {
+  .typo-h1 {
+    @apply 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
+  }
 }
 
 @layer utilities {
