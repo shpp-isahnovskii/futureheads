@@ -3,7 +3,7 @@ const BurgerButton = ({onShow, isActive}) => {
   return (
     <>
       <div
-        className="flex items-center justify-center h-11 w-11 border-2 rounded-full z-50"
+        className="flex items-center justify-center h-11 w-11 border-2 rounded-full"
         onClick={onShow}
       >
         <div className="h-4 w-4 flex flex-wrap relative rotate-45 [&>*]:transition-all [&>*]:duration-500">

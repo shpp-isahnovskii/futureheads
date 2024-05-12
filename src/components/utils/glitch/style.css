@@ -1,12 +1,12 @@
 .text-animation--glitch:before {
   @apply absolute left-[-2px] content-[attr(inner-text)];
   text-shadow: -2px 0 blue;
-  animation: 4s linear 2s infinite alternate both running glitch-it-before;
+  animation: 4s linear 8s infinite alternate both running glitch-it-before;
 }
 .text-animation--glitch:after {
   @apply absolute left-[2px] content-[attr(inner-text)];
   text-shadow: 2px 0 red;
-  animation: 4s linear 2s infinite alternate both running glitch-it-after;
+  animation: 4s linear 8s infinite alternate both running glitch-it-after;
 }
 
 @keyframes glitch-it-before {

@@ -17,8 +17,18 @@
     font-display: block;
     src: url('./assets/fonts/PPGoshaSans-Bold.woff2');
   }
+  @font-face {
+    font-family: 'Gilroy-r';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('./assets/fonts/GilroyRegular.woff2');
+  }
   html {
     @apply font-gosha text-white bg-black;
+  }
+  body {
+    @apply overflow-x-hidden;
   }
   nav {
     @apply text-[6.25rem];
@@ -26,17 +36,25 @@
   h1 {
     @apply typo-h1;
   }
+  h2 {
+    @apply typo-h2;
+  }
 }
 
 @layer components {
   .typo-h1 {
-    @apply 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
+    @apply text-7xl 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
+  }
+  .typo-h2 {
+    @apply text-[54px]/[45px] font-bold;
   }
 }
 
 @layer utilities {
   .text-stroke {
-    @apply text-black transition-colors duration-300;
     -webkit-text-stroke: 1px white;
+  }
+  .text-transition-transparent {
+    @apply text-transparent transition-colors;
   }
 }
