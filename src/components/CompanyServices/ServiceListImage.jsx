@@ -1,6 +1,7 @@
 import { useRef, useMemo } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import GlitchImage from '@/components/utils/glitch/image';
 
 const ServiceListImage = ({ content, isActiveService }) => {
   const container = useRef(null);
@@ -12,7 +13,7 @@ const ServiceListImage = ({ content, isActiveService }) => {
   useGSAP(() => {
     timeline
       .addLabel('mainTL')
-      .to(container.current, { opacity: 1, duration: '0.2' }, 'mainTL')
+      .to(container.current, { zIndex: 30, opacity: 1, duration: '0.4' }, 'mainTL')
       .to(container.current, { scale: 1.02, duration: '0.2' }, 'mainTL')
       .to(container.current, { scale: 1, duration: '0.2' }, '>');
   });
@@ -31,7 +32,7 @@ const ServiceListImage = ({ content, isActiveService }) => {
   return (
     <>
       <div ref={container} className="absolute right-0 w-max opacity-0 scale-1">
-        <img className="object-none" src={content.image} alt={content.alt} />
+        <GlitchImage image={content.image} alt={content.alt} />
         <img
           className={`absolute ${content.imageNum.position}`}
           src={content.imageNum.src}

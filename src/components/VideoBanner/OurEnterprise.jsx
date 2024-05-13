@@ -1,4 +1,4 @@
-import GlitchText from '@/components/utils/glitch';
+import GlitchText from '@/components/utils/glitch/text';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 

@@ -8,7 +8,11 @@ const CompanyServices = () => {
     {
       service: 'Development',
       description: 'Elegant and innovative tech solutions',
-      image: '/src/assets/images/development.png',
+      image: {
+        src: '/src/assets/images/development.png',
+        pseudoAttr:
+          "before:content-[url('/src/assets/images/development.png')] after:content-[url('/src/assets/images/development.png')]",
+      },
       imageNum: {
         src: '/src/assets/images/development-num.png',
         position: '-top-36 -right-[76px]',
@@ -18,7 +22,11 @@ const CompanyServices = () => {
     {
       service: 'Design',
       description: 'Web, application, product, and UI/UX design',
-      image: '/src/assets/images/design.png',
+      image: {
+        src: '/src/assets/images/design.png',
+        pseudoAttr:
+          "before:content-[url('/src/assets/images/design.png')] after:content-[url('/src/assets/images/design.png')]",
+      },
       imageNum: {
         src: '/src/assets/images/design-num.png',
         position: '-top-[140px] -right-[80px]',
@@ -28,7 +36,11 @@ const CompanyServices = () => {
     {
       service: 'Marketing',
       description: 'Bridging the gap between you an your customers',
-      image: '/src/assets/images/marketing.png',
+      image: {
+        src: '/src/assets/images/marketing.png',
+        pseudoAttr:
+          "before:content-[url('/src/assets/images/marketing.png')] after:content-[url('/src/assets/images/marketing.png')]",
+      },
       imageNum: {
         src: '/src/assets/images/marketing-num.png',
         position: '-top-32 -right-[142px]',
@@ -39,7 +51,11 @@ const CompanyServices = () => {
       service: 'Consulting',
       description:
         'Help in coming up with new ideas and finding the matching solutions',
-      image: '/src/assets/images/consulting.png',
+      image: {
+        src: '/src/assets/images/consulting.png',
+        pseudoAttr:
+          "before:content-[url('/src/assets/images/consulting.png')] after:content-[url('/src/assets/images/consulting.png')]",
+      },
       imageNum: {
         src: '/src/assets/images/consulting-num.png',
         position: '-top-[170px] -right-[76px]',
@@ -51,7 +67,7 @@ const CompanyServices = () => {
   return (
     <>
       <section className="flex relative h-screen w-[calc(100%-90px)] mx-auto">
-        <ul className="ml-48 z-20 w-auto">
+        <ul className="ml-48 z-20 max-w-[33%]">
           {services.map((content, index) => (
             <ServiceListItem
               key={index}
