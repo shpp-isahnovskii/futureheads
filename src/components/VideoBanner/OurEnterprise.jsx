@@ -33,7 +33,7 @@ const OurEnterprise = (props) => {
     <>
       <h1
         ref={test}
-        className={`opacity-0 flex flex-col font-bold text-black text-stroke absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${props.className}`}
+        className={`opacity-0 flex flex-col font-bold text-black text-stroke absolute-center ${props.className}`}
       >
         <GlitchText>SOFTWARE</GlitchText>
         <GlitchText>DEVELOPMENT</GlitchText>

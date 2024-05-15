@@ -19,164 +19,164 @@
 
 @keyframes image-glitch-before {
   0% {
-      clip: rect(916px, 1239px, 204px, 0px);
+      clip-path: rect(916px 1239px 204px 0px);
   }
 
   5% {
-      clip: rect(167px, 1239px, 717px, 0px);
+      clip-path: rect(167px 1239px 717px 0px);
   }
 
   10% {
-      clip: rect(299px, 1239px, 74px, 0px);
+      clip-path: rect(299px 1239px 74px 0px);
   }
 
   15% {
-      clip: rect(864px, 1239px, 733px, 0px);
+      clip-path: rect(864px 1239px 733px 0px);
   }
 
   20% {
-      clip: rect(308px, 1239px, 1016px, 0px);
+      clip-path: rect(308px 1239px 1016px 0px);
   }
 
   25% {
-      clip: rect(1034px, 1239px, 474px, 0px);
+      clip-path: rect(1034px 1239px 474px 0px);
   }
 
   30% {
-      clip: rect(977px, 1239px, 763px, 0px);
+      clip-path: rect(977px 1239px 763px 0px);
   }
 
   35% {
-      clip: rect(551px, 1239px, 833px, 0px);
+      clip-path: rect(551px 1239px 833px 0px);
   }
 
   40% {
-      clip: rect(4px, 1239px, 79px, 0px);
+      clip-path: rect(4px 1239px 79px 0px);
   }
 
   45% {
-      clip: rect(215px, 1239px, 706px, 0px);
+      clip-path: rect(215px 1239px 706px 0px);
   }
 
   50% {
-      clip: rect(287px, 1239px, 388px, 0px);
+      clip-path: rect(287px 1239px 388px 0px);
   }
 
   55% {
-      clip: rect(952px, 1239px, 599px, 0px);
+      clip-path: rect(952px 1239px 599px 0px);
   }
 
   60% {
-      clip: rect(680px, 1239px, 458px, 0px);
+      clip-path: rect(680px 1239px 458px 0px);
   }
 
   65% {
-      clip: rect(1051px, 1239px, 482px, 0px);
+      clip-path: rect(1051px 1239px 482px 0px);
   }
 
   70% {
-      clip: rect(951px, 1239px, 951px, 0px);
+      clip-path: rect(951px 1239px 951px 0px);
   }
 
   75% {
-      clip: rect(844px, 1239px, 532px, 0px);
+      clip-path: rect(844px 1239px 532px 0px);
   }
 
   80% {
-      clip: rect(441px, 1239px, 675px, 0px);
+      clip-path: rect(441px 1239px 675px 0px);
   }
 
   85% {
-      clip: rect(474px, 1239px, 86px, 0px);
+      clip-path: rect(474px 1239px 86px 0px);
   }
 
   90% {
-      clip: rect(19px, 1239px, 454px, 0px);
+      clip-path: rect(19px 1239px 454px 0px);
   }
 
   95% {
-      clip: rect(450px, 1239px, 827px, 0px);
+      clip-path: rect(450px 1239px 827px 0px);
   }
 }
 
 @keyframes image-glitch-after {
   0% {
-      clip: rect(835px, 1239px, 719px, 0px);
+      clip-path: rect(835px 1239px 719px 0px);
   }
 
   5% {
-      clip: rect(193px, 1239px, 871px, 0px);
+      clip-path: rect(193px 1239px 871px 0px);
   }
 
   10% {
-      clip: rect(673px, 1239px, 715px, 0px);
+      clip-path: rect(673px 1239px 715px 0px);
   }
 
   15% {
-      clip: rect(473px, 1239px, 538px, 0px);
+      clip-path: rect(473px 1239px 538px 0px);
   }
 
   20% {
-      clip: rect(812px, 1239px, 976px, 0px);
+      clip-path: rect(812px 1239px 976px 0px);
   }
 
   25% {
-      clip: rect(171px, 1239px, 130px, 0px);
+      clip-path: rect(171px 1239px 130px 0px);
   }
 
   30% {
-      clip: rect(258px, 1239px, 659px, 0px);
+      clip-path: rect(258px 1239px 659px 0px);
   }
 
   35% {
-      clip: rect(668px, 1239px, 797px, 0px);
+      clip-path: rect(668px 1239px 797px 0px);
   }
 
   40% {
-      clip: rect(993px, 1239px, 813px, 0px);
+      clip-path: rect(993px 1239px 813px 0px);
   }
 
   45% {
-      clip: rect(688px, 1239px, 925px, 0px);
+      clip-path: rect(688px 1239px 925px 0px);
   }
 
   50% {
-      clip: rect(209px, 1239px, 961px, 0px);
+      clip-path: rect(209px 1239px 961px 0px);
   }
 
   55% {
-      clip: rect(937px, 1239px, 139px, 0px);
+      clip-path: rect(937px 1239px 139px 0px);
   }
 
   60% {
-      clip: rect(142px, 1239px, 483px, 0px);
+      clip-path: rect(142px 1239px 483px 0px);
   }
 
   65% {
-      clip: rect(782px, 1239px, 277px, 0px);
+      clip-path: rect(782px 1239px 277px 0px);
   }
 
   70% {
-      clip: rect(343px, 1239px, 898px, 0px);
+      clip-path: rect(343px 1239px 898px 0px);
   }
 
   75% {
-      clip: rect(695px, 1239px, 143px, 0px);
+      clip-path: rect(695px 1239px 143px 0px);
   }
 
   80% {
-      clip: rect(400px, 1239px, 95px, 0px);
+      clip-path: rect(400px 1239px 95px 0px);
   }
 
   85% {
-      clip: rect(764px, 1239px, 980px, 0px);
+      clip-path: rect(764px 1239px 980px 0px);
   }
 
   90% {
-      clip: rect(362px, 1239px, 813px, 0px);
+      clip-path: rect(362px 1239px 813px 0px);
   }
 
   95% {
-      clip: rect(417px, 1239px, 413px, 0px);
+      clip-path: rect(417px 1239px 413px 0px);
   }
 }

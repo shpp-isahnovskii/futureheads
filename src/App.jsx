@@ -5,9 +5,11 @@ import VideoBanner from './components/VideoBanner';
 import CompanyServices from './components/CompanyServices';
 import ScrollingText from './components/ScrollingText';
 import OurWorks from './components/OurWorks';
+import { ScrollTrigger } from 'gsap/all';
 
 function App() {
   gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>
@@ -16,6 +18,7 @@ function App() {
       <CompanyServices />
       <ScrollingText />
       <OurWorks />
+      <div className='h-screen'>test</div>
     </>
   );
 }

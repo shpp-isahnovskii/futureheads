@@ -9,9 +9,9 @@ const CompanyServices = () => {
       service: 'Development',
       description: 'Elegant and innovative tech solutions',
       image: {
-        src: '/src/assets/images/development.png',
+        src: '/src/assets/images/development.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/development.png')] after:content-[url('/src/assets/images/development.png')]",
+          "before:content-[url('/src/assets/images/development.webp')] after:content-[url('/src/assets/images/development.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/development-num.png',
@@ -23,9 +23,9 @@ const CompanyServices = () => {
       service: 'Design',
       description: 'Web, application, product, and UI/UX design',
       image: {
-        src: '/src/assets/images/design.png',
+        src: '/src/assets/images/design.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/design.png')] after:content-[url('/src/assets/images/design.png')]",
+          "before:content-[url('/src/assets/images/design.webp')] after:content-[url('/src/assets/images/design.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/design-num.png',
@@ -37,9 +37,9 @@ const CompanyServices = () => {
       service: 'Marketing',
       description: 'Bridging the gap between you an your customers',
       image: {
-        src: '/src/assets/images/marketing.png',
+        src: '/src/assets/images/marketing.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/marketing.png')] after:content-[url('/src/assets/images/marketing.png')]",
+          "before:content-[url('/src/assets/images/marketing.webp')] after:content-[url('/src/assets/images/marketing.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/marketing-num.png',
@@ -52,9 +52,9 @@ const CompanyServices = () => {
       description:
         'Help in coming up with new ideas and finding the matching solutions',
       image: {
-        src: '/src/assets/images/consulting.png',
+        src: '/src/assets/images/consulting.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/consulting.png')] after:content-[url('/src/assets/images/consulting.png')]",
+          "before:content-[url('/src/assets/images/consulting.webp')] after:content-[url('/src/assets/images/consulting.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/consulting-num.png',
