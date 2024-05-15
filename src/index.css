@@ -57,8 +57,13 @@
   .text-stroke--bold {
     -webkit-text-stroke: 2px white;
   }
-
   .text-transition-transparent {
     @apply text-transparent transition-colors;
+  }
+  .animation-running-text--forward {
+    @apply animate-running-forward animation-duration-[65s] hover:animation-paused;
+  }
+  .animation-running-text--backward {
+    @apply animate-running-backward animation-duration-[70s] hover:animation-paused;
   }
 }
