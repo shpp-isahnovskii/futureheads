@@ -14,6 +14,14 @@ export default {
       screens: {
         '3xl': '1800px',
       },
+      animation: {
+        'running-text': 'forward-n-back 1s ease-in-out Infinite',
+      },
+      keyframes: {
+        'back-n-forward': {
+          '100%': {transform: 'translateX(-100%)' }
+        }
+      }
     },
   },
   plugins: [],

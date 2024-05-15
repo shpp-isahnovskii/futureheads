@@ -54,6 +54,10 @@
   .text-stroke {
     -webkit-text-stroke: 1px white;
   }
+  .text-stroke--bold {
+    -webkit-text-stroke: 2px white;
+  }
+
   .text-transition-transparent {
     @apply text-transparent transition-colors;
   }

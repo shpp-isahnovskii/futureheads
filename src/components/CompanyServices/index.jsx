@@ -3,7 +3,7 @@ import ServiceListItem from './ServiceListItem';
 import ServiceListImage from './ServiceListImage';
 
 const CompanyServices = () => {
-  const [activeService, setActiveService] = useState(1);
+  const [activeService, setActiveService] = useState(0);
   const services = [
     {
       service: 'Development',

@@ -1,5 +1,5 @@
 .image-animation--glitch:before, .image-animation--glitch:after {
-  @apply hidden absolute top-0 w-full h-full pointer-events-none opacity-0;
+  @apply hidden absolute top-0 w-full h-full pointer-events-none;
 }
 
 .image-animation--glitch:before {
@@ -11,10 +11,10 @@
   animation: image-glitch-after 7s linear 0s infinite alternate-reverse;
 }
 .show-animation.image-animation--glitch:before {
-  @apply opacity-70 block;
+  @apply block opacity-70;
 }
 .show-animation.image-animation--glitch:after {
-  @apply opacity-90 block;
+  @apply block opacity-90;
 }
 
 @keyframes image-glitch-before {
