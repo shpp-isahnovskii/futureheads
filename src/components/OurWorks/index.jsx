@@ -1,33 +1,44 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const OurWorks = () => {
   const timeline = gsap.timeline();
-  const growingText = useRef(null);
+  const ourWorksRef = useRef(null);
   const container = useRef(null);
-  const [containerHeight, setContainerHeight] = useState(0);
-  useEffect(() => {
-    setContainerHeight(container.current.clientHeight);
-  }, [container]);
-  // useGSAP(
-  //   () => {
-  //     timeline.to(growingText.current, {
-  //       scrollTrigger: {
-  //         trigger: container.current,
-  //         start: 'top top',
-  //         end: '+500px',
-  //         pin: true,
-  //         scrub: 1,
-  //         markers: true,
-  //       },
-  //     });
-  //   },
-  //   { scope: container },
-  // );
+
+  useGSAP(
+    () => {
+      timeline.to(ourWorksRef.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          start: 'top top',
+          end: '+600px',
+          pin: true,
+          scrub: 2,
+        },
+        maskSize: 16000,
+        ease: 'power4.in',
+      });
+    },
+    { scope: container },
+  );
   return (
     <>
       <section ref={container} className="h-screen overflow-hidden">
+        <div className="w-full h-full">
+          <img
+            ref={ourWorksRef}
+            src="/src/assets/images/our-works.webp"
+            className="object-cover relative w-full h-full"
+            style={{
+              maskImage: "url('/src/assets/images/our-works.svg')",
+              maskSize: '98%',
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center center',
+            }}
+          />
+        </div>
       </section>
     </>
   );

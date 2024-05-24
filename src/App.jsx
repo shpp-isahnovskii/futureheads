@@ -5,6 +5,7 @@ import VideoBanner from './components/VideoBanner';
 import CompanyServices from './components/CompanyServices';
 import ScrollingText from './components/ScrollingText';
 import OurWorks from './components/OurWorks';
+import OurClients from './components/OurClients';
 import { ScrollTrigger } from 'gsap/all';
 
 function App() {
@@ -13,12 +14,12 @@ function App() {
 
   return (
     <>
-      <HeaderComponent />
+      {/* <HeaderComponent />
       <VideoBanner />
       <CompanyServices />
       <ScrollingText />
-      <OurWorks />
-      <div className='h-screen'>test</div>
+      <OurWorks /> */}
+      <OurClients />
     </>
   );
 }

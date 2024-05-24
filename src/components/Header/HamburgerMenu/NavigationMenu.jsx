@@ -6,7 +6,7 @@ const NavigationMenu = ({ isActive }) => {
       {createPortal(
         <nav
           className={`transition-all ease-out duration-1000 fixed w-screen bg-black h-screen top-0 rotate-180 pt-6 ${
-            isActive ? 'left-0' : 'left-[100svw]'
+            isActive ? 'left-0' : 'left-[105vw]'
           } z-40`}
         >
           <ul

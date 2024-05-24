@@ -28,7 +28,7 @@
     @apply font-gosha text-white bg-black;
   }
   body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-clip;
   }
   nav {
     @apply text-[6.25rem];
