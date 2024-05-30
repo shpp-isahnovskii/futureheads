@@ -6,6 +6,7 @@ import CompanyServices from './components/CompanyServices';
 import ScrollingText from './components/ScrollingText';
 import OurWorks from './components/OurWorks';
 import OurClients from './components/OurClients';
+import ContactForm from './components/ContactForm';
 import { ScrollTrigger } from 'gsap/all';
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
       <VideoBanner />
       <CompanyServices />
       <ScrollingText />
-      <OurWorks /> */}
-      <OurClients />
+      <OurWorks />
+      <OurClients /> */}
+      <ContactForm />
     </>
   );
 }

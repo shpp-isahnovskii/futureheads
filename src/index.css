@@ -13,7 +13,7 @@
   @font-face {
     font-family: 'PPGoshaSans';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-display: block;
     src: url('./assets/fonts/PPGoshaSans-Bold.woff2');
   }
@@ -38,6 +38,12 @@
   }
   h2 {
     @apply typo-h2;
+  }
+  input, textarea {
+    @apply outline-none;
+  }
+  :disabled {
+    @apply disabled:bg-gray-200 disabled:text-black;
   }
 }
 
@@ -68,5 +74,8 @@
   }
   .animation-running-text--backward {
     @apply animate-running-backward animation-duration-[70s] hover:animation-paused;
+  }
+  .error-message {
+    @apply text-red-400 text-xs;
   }
 }
