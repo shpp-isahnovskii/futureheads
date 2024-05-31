@@ -2,13 +2,13 @@ import GlitchText from '@/components/utils/glitch/text';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const OurEnterprise = (props) => {
+const OurEnterprise = ({ isVideoEnded, className }) => {
   useEffect(() => {
-    if (props.isVideoEnded) {
+    if (isVideoEnded) {
       textBounceAnimation();
       textMoveAnimation();
     }
-  }, [props.isVideoEnded]);
+  }, [isVideoEnded]);
 
   const test = useRef(null);
   const tl = gsap.timeline();
@@ -33,7 +33,7 @@ const OurEnterprise = (props) => {
     <>
       <h1
         ref={test}
-        className={`opacity-0 flex flex-col font-bold text-black text-stroke absolute-center ${props.className}`}
+        className={`opacity-0 flex flex-col font-bold text-black text-stroke absolute-center ${className}`}
       >
         <GlitchText>SOFTWARE</GlitchText>
         <GlitchText>DEVELOPMENT</GlitchText>

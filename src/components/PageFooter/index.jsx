@@ -37,7 +37,6 @@ const PageFooter = () => {
             className="block font-bold mb-1"
           >
             tomorrowheads@gmail.com
-            <instagram />
           </a>
           <p className="font-bold mb-6">Kyiv, Ukraine</p>
           <ul className="flex *:ml-5 ml-auto justify-end">

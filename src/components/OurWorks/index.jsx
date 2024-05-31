@@ -13,7 +13,7 @@ const OurWorks = () => {
         scrollTrigger: {
           trigger: container.current,
           start: 'top top',
-          end: '+600px',
+          end: '+800px',
           pin: true,
           scrub: 2,
         },

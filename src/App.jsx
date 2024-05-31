@@ -16,12 +16,12 @@ function App() {
 
   return (
     <>
-      {/* <HeaderComponent />
+      <HeaderComponent />
       <VideoBanner />
       <CompanyServices />
       <ScrollingText />
       <OurWorks />
-      <OurClients /> */}
+      <OurClients />
       <ContactForm />
       <PageFooter />
     </>

@@ -10,6 +10,11 @@
 }
 
 @keyframes glitch-it-before {
+
+  0% {
+      opacity: 0;
+  }
+
   0% {
       clip-path: rect(93px 824px 19px 0px);
       opacity: 1;
@@ -94,6 +99,10 @@
 
 @keyframes glitch-it-after {
   0% {
+      opacity: 0;
+  }
+
+  1% {
       clip-path: rect(38px 824px 87px 0px);
       opacity: 1;
   }
