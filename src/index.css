@@ -24,6 +24,13 @@
     font-display: block;
     src: url('./assets/fonts/GilroyRegular.woff2');
   }
+  @font-face {
+    font-family: 'SocialRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('./assets/fonts/SocialRegular.woff2');
+  }
   html {
     @apply font-gosha text-white bg-black;
   }
@@ -77,5 +84,18 @@
   }
   .error-message {
     @apply text-red-400 text-xs;
+  }
+  /* icons */
+  .icon-telegram {
+    @apply before:content-['\e801'] font-icons;
+  }
+  .icon-instagram {
+    @apply before:content-['\e800'] font-icons;
+  }
+  .icon-facebook {
+    @apply before:content-['\f09a'] font-icons;
+  }
+  .icon-behance {
+    @apply before:content-['\f1b4'] font-icons;
   }
 }

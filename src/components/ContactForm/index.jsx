@@ -10,7 +10,6 @@ const ContactForm = () => {
     formState: { errors, isSubmitting },
     watch,
     resetField,
-    getValues,
   } = useForm();
 
   return (
@@ -103,18 +102,14 @@ const ContactForm = () => {
             </a>
             <p className="font-bold mb-6">Kyiv, Ukraine</p>
             <p className="mb-4">Social:</p>
-            <ul className="flex *:mr-5">
+            <ul className="flex *:mr-5 text-lg">
               <li>
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="./instagram.svg"
-                    className="block w-5 h-5"
-                    alt="instagram"
-                  />
+                  <span className="icon-instagram"/>
                 </a>
               </li>
               <li>
@@ -123,11 +118,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="./telegram.svg"
-                    className="block w-5 h-5"
-                    alt="telegram"
-                  />
+                  <span className="icon-telegram"/>
                 </a>
               </li>
               <li>
@@ -136,11 +127,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="./facebook.svg"
-                    className="block w-5 h-5"
-                    alt="facebook"
-                  />
+                  <span className="icon-facebook"/>
                 </a>
               </li>
               <li>
@@ -149,11 +136,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="./behance.svg"
-                    className="block w-5 h-5"
-                    alt="behance"
-                  />
+                  <span className="icon-behance"/>
                 </a>
               </li>
             </ul>

@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         gosha: ['PPGoshaSans', 'Verdana', 'Arial', 'sans-serif'],
         gilroy: ['Gilroy-r', 'Verdana', 'Arial', 'sans-serif'],
+        icons: ['SocialRegular'],
       },
       screens: {
         '3xl': '1800px',

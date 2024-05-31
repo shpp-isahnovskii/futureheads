@@ -7,6 +7,7 @@ import ScrollingText from './components/ScrollingText';
 import OurWorks from './components/OurWorks';
 import OurClients from './components/OurClients';
 import ContactForm from './components/ContactForm';
+import PageFooter from './components/PageFooter';
 import { ScrollTrigger } from 'gsap/all';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <OurWorks />
       <OurClients /> */}
       <ContactForm />
+      <PageFooter />
     </>
   );
 }
