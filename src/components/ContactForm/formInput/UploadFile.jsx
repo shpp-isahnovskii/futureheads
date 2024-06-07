@@ -1,4 +1,5 @@
 import { ErrorMessage } from '@hookform/error-message';
+import AnimatedCheck from '@/components/images/AnimatedCheck';
 
 const UploadFile = ({
   id,
@@ -66,7 +67,7 @@ const UploadFile = ({
             className="my-auto w-6 h-6"
             onClick={() => resetField(name)}
           >
-            <img src="./arrow-check.svg" alt="uploaded" />
+            <AnimatedCheck />
           </button>
         )}
       </div>

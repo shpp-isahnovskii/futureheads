@@ -4,6 +4,7 @@ import TextInput from './formInput/TextInput';
 import TextAreaInput from './formInput/TextAreaInput';
 import UploadFile from './formInput/UploadFile';
 import CursorContext from '@/providers/CursorProvider';
+import CustomSocialList from '@/components/utils/CustomSocialList';
 
 const ContactForm = () => {
   const { setCursorState } = useContext(CursorContext);
@@ -110,44 +111,7 @@ const ContactForm = () => {
             </a>
             <p className="font-bold mb-6">Kyiv, Ukraine</p>
             <p className="mb-4">Social:</p>
-            <ul className="flex *:mr-5 text-lg">
-              <li>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon-instagram" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://telegram.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon-telegram" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon-facebook" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.behance.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon-behance" />
-                </a>
-              </li>
-            </ul>
+            <CustomSocialList className="*:mr-5" />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import CursorContext from '@/providers/CursorProvider';
+import CustomSocialList from '@/components/utils/CustomSocialList';
 
 const PageFooter = () => {
   const { setCursorState } = useContext(CursorContext);
@@ -20,7 +21,7 @@ const PageFooter = () => {
               2020 All rights reserved.
             </p>
           </div>
-          <ul className="flex flex-col justify-around text-lg">
+          <ul className="flex flex-col justify-around text-lg [&>*]:transition-all [&>*:hover]:text-xl">
             <li
               onMouseEnter={() => setCursorState('circle-growth')}
               onMouseLeave={() => setCursorState(undefined)}
@@ -68,56 +69,7 @@ const PageFooter = () => {
             tomorrowheads@gmail.com
           </a>
           <p className="font-bold mb-6">Kyiv, Ukraine</p>
-          <ul className="flex *:ml-5 ml-auto justify-end">
-            <li
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-            >
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-instagram" />
-              </a>
-            </li>
-            <li
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-            >
-              <a
-                href="https://telegram.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-telegram" />
-              </a>
-            </li>
-            <li
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-            >
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-facebook" />
-              </a>
-            </li>
-            <li
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-            >
-              <a
-                href="https://www.behance.net"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon-behance" />
-              </a>
-            </li>
-          </ul>
+          <CustomSocialList className="justify-end *:ml-5" />
         </div>
       </footer>
     </>

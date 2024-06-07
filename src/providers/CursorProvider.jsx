@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react';
-import CustomCursor from '@/components/CustomCursor';
+import CustomCursor from '@/components/utils/CustomCursor';
 
 const CursorContext = createContext('cursorContext');
 
