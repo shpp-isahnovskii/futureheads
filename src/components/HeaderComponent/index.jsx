@@ -1,5 +1,5 @@
-import CompanyBrand from '@/components/Header/CompanyBrand';
-import HamburgerMenu from '@/components/Header/HamburgerMenu';
+import CompanyBrand from './CompanyBrand';
+import HamburgerMenu from './HamburgerMenu';
 
 const HeaderComponent = () => {
   return (

@@ -2,16 +2,16 @@ import { useRef, useMemo } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const ServiceListItem = ({
-  content,
-  isActiveService,
-  setActiveService,
-}) => {
+const ServiceListItem = ({ content, isActiveService, setActiveService, onMouseEnter, onMouseLeave }) => {
+
   const container = useRef(null);
   const headerRef = useRef(null);
   const descriptionRef = useRef(null);
 
-  const timeline = useMemo(() => gsap.timeline({ paused: true, ease: 'back.out' }), []);
+  const timeline = useMemo(
+    () => gsap.timeline({ paused: true, ease: 'back.out' }),
+    [],
+  );
 
   useGSAP(() => {
     timeline
@@ -51,10 +51,17 @@ const ServiceListItem = ({
         className="h-32 mb-9"
         onMouseEnter={() => {
           setActiveService();
+          onMouseEnter();
+        }}
+        onMouseLeave={() => {
+          onMouseLeave();
         }}
       >
         <h2 ref={headerRef}>{content.service}</h2>
-        <div ref={descriptionRef} className="font-gilroy text-lg/[1.2] mt-3 w-[430px]">
+        <div
+          ref={descriptionRef}
+          className="font-gilroy text-lg/[1.2] mt-3 w-[430px]"
+        >
           {content.description}
         </div>
       </li>

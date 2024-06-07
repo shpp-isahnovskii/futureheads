@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import ServiceListItem from './ServiceListItem';
 import ServiceListImage from './ServiceListImage';
+import CursorContext from '@/providers/CursorProvider';
 
 const CompanyServices = () => {
+  const { setCursorState } = useContext(CursorContext);
+
   const [activeService, setActiveService] = useState(0);
   const services = [
     {
@@ -74,6 +77,8 @@ const CompanyServices = () => {
               isActiveService={index === activeService}
               setActiveService={() => setActiveService(index)}
               content={content}
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
             />
           ))}
         </ul>

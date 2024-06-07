@@ -35,7 +35,13 @@
     @apply font-gosha text-white bg-black;
   }
   body {
-    @apply overflow-x-clip;
+    @apply overflow-x-clip cursor-none;
+  }
+  body.no-scroll {
+    @apply overflow-hidden;
+  }
+  a, form label, button {
+    @apply cursor-none;
   }
   nav {
     @apply text-[6.25rem];
@@ -51,6 +57,28 @@
   }
   :disabled {
     @apply disabled:bg-gray-200 disabled:text-black;
+  }
+
+  html::-webkit-scrollbar {
+    @apply w-[3px] h-[3px];
+  }
+  html::-webkit-scrollbar-button {
+      @apply bg-[#666666];
+  }
+  html::-webkit-scrollbar-track {
+      @apply bg-[#999999];
+  }
+  html::-webkit-scrollbar-track-piece {
+      @apply bg-[white];
+  }
+  html::-webkit-scrollbar-thumb {
+    @apply h-[50px] bg-[#666666] rounded-[3px];
+  }
+  html::-webkit-scrollbar-corner {
+      @apply bg-[#999999];
+  }
+  html::-webkit-resizer {
+      @apply bg-[#666666];
   }
 }
 

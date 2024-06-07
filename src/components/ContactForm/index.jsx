@@ -1,9 +1,13 @@
 import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
 import TextInput from './formInput/TextInput';
 import TextAreaInput from './formInput/TextAreaInput';
 import UploadFile from './formInput/UploadFile';
+import CursorContext from '@/providers/CursorProvider';
 
 const ContactForm = () => {
+  const { setCursorState } = useContext(CursorContext);
+
   const {
     register,
     handleSubmit,
@@ -72,6 +76,8 @@ const ContactForm = () => {
               className="basis-full mt-10 mb-16"
             />
             <button
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
               type="submit"
               className="px-8 py-5 border-2 border-black tracking-[0.2em] font-bold hover:bg-black hover:text-white transition-colors duration-300"
               disabled={isSubmitting}
@@ -79,6 +85,8 @@ const ContactForm = () => {
               SEND MESSAGE
             </button>
             <UploadFile
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
               id="file"
               name="file"
               register={register}
@@ -109,7 +117,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon-instagram"/>
+                  <span className="icon-instagram" />
                 </a>
               </li>
               <li>
@@ -118,7 +126,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon-telegram"/>
+                  <span className="icon-telegram" />
                 </a>
               </li>
               <li>
@@ -127,7 +135,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon-facebook"/>
+                  <span className="icon-facebook" />
                 </a>
               </li>
               <li>
@@ -136,7 +144,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="icon-behance"/>
+                  <span className="icon-behance" />
                 </a>
               </li>
             </ul>

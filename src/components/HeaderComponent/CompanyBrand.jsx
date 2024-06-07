@@ -1,7 +1,15 @@
+import { useContext } from 'react';
+import CursorContext from '@/providers/CursorProvider';
+
 const HeaderComponent = () => {
+  const { setCursorState } = useContext(CursorContext);
   return (
     <>
-      <a href="#">
+      <a
+        href="#"
+        onMouseEnter={() => setCursorState('circle-growth')}
+        onMouseLeave={() => setCursorState(undefined)}
+      >
         <p className="text-left text-lg font-bold leading-[1.2em]">
           tomorrow
           <br />

@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
-import HeaderComponent from './components/Header/HeaderComponent';
+import HeaderComponent from './components/HeaderComponent';
 import VideoBanner from './components/VideoBanner';
 import CompanyServices from './components/CompanyServices';
 import ScrollingText from './components/ScrollingText';

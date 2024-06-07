@@ -1,9 +1,18 @@
-const BurgerButton = ({onShow, isActive}) => {
+import { useContext } from 'react';
+import CursorContext from '@/providers/CursorProvider';
 
+const BurgerButton = ({ isActive, onShow }) => {
+  const { setCursorState } = useContext(CursorContext);
   return (
     <>
       <div
-        className="flex items-center justify-center h-11 w-11 border-2 rounded-full"
+        onMouseEnter={() => {
+          setCursorState('circle-growth');
+        }}
+        onMouseLeave={() => {
+          setCursorState(undefined);
+        }}
+        className="flex items-center justify-center h-11 w-11 border-2 rounded-full z-40"
         onClick={onShow}
       >
         <div className="h-4 w-4 flex flex-wrap relative rotate-45 [&>*]:transition-all [&>*]:duration-500">

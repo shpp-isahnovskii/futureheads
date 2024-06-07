@@ -1,4 +1,8 @@
+import { useContext } from 'react';
+import CursorContext from '@/providers/CursorProvider';
+
 const PageFooter = () => {
+  const { setCursorState } = useContext(CursorContext);
   return (
     <>
       <footer className="flex justify-between pt-40 pb-44 max-w-[calc(100%-90px)] m-auto px-[130px]">
@@ -17,11 +21,36 @@ const PageFooter = () => {
             </p>
           </div>
           <ul className="flex flex-col justify-around text-lg">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Work</li>
-            <li>Contact</li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
+              Home
+            </li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
+              About
+            </li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
+              Services
+            </li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
+              Work
+            </li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
+              Contact
+            </li>
           </ul>
         </div>
 
@@ -40,7 +69,10 @@ const PageFooter = () => {
           </a>
           <p className="font-bold mb-6">Kyiv, Ukraine</p>
           <ul className="flex *:ml-5 ml-auto justify-end">
-            <li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
               <a
                 href="https://www.instagram.com"
                 target="_blank"
@@ -49,7 +81,10 @@ const PageFooter = () => {
                 <span className="icon-instagram" />
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
               <a
                 href="https://telegram.org"
                 target="_blank"
@@ -58,7 +93,10 @@ const PageFooter = () => {
                 <span className="icon-telegram" />
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
               <a
                 href="https://www.facebook.com"
                 target="_blank"
@@ -67,7 +105,10 @@ const PageFooter = () => {
                 <span className="icon-facebook" />
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setCursorState('circle-growth')}
+              onMouseLeave={() => setCursorState(undefined)}
+            >
               <a
                 href="https://www.behance.net"
                 target="_blank"

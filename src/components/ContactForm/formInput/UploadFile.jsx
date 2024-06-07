@@ -1,13 +1,24 @@
 import { ErrorMessage } from '@hookform/error-message';
 
-const UploadFile = ({ id, name, register, watch, errors, resetField }) => {
+const UploadFile = ({
+  id,
+  name,
+  register,
+  watch,
+  errors,
+  resetField,
+  onMouseEnter,
+  onMouseLeave,
+}) => {
   const fileValue = watch(name);
   return (
     <>
       <div className="flex relative">
         <label
           htmlFor={id}
-          className="px-8 py-5 tracking-[0.2em] font-bold hover:cursor-pointer"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          className="px-8 py-5 tracking-[0.2em] font-bold"
         >
           UPLOAD FILE
         </label>
@@ -50,7 +61,11 @@ const UploadFile = ({ id, name, register, watch, errors, resetField }) => {
           )}
         />
         {fileValue && !!fileValue.length && (
-          <button type="button" className="my-auto w-6 h-6" onClick={() => resetField(name)}>
+          <button
+            type="button"
+            className="my-auto w-6 h-6"
+            onClick={() => resetField(name)}
+          >
             <img src="./arrow-check.svg" alt="uploaded" />
           </button>
         )}
