@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import CustomPlugin from './src/plugins/tailwind';
 
 const plugin = require('tailwindcss/plugin');
 
@@ -16,6 +17,11 @@ export default {
         icons: ['SocialRegular'],
       },
       screens: {
+        //'sm': '640px',
+        //'md': '768px',
+        //'lg': '1024px',
+        //'xl': '1280px',
+        //'2xl': '1536px',
         '3xl': '1800px',
       },
       animation: {
@@ -32,20 +38,13 @@ export default {
           '100%': { transform: 'translateX(0)' },
         },
       },
+      fontSize: {
+        '10xl': ['6.25rem', {lineHeight: '6.25rem'}]
+      }
     },
   },
   plugins: [
-    plugin(({ matchUtilities, addUtilities }) => {
-      matchUtilities({
-        'animation-duration': (value) => {
-          return {
-            'animation-duration': value,
-          };
-        },
-      });
-      addUtilities({
-        '.animation-paused': { 'animation-play-state': 'paused' },
-      });
-    }),
+    plugin(CustomPlugin.writingMode),
+    plugin(CustomPlugin.animationDuration),
   ],
 };

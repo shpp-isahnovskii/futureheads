@@ -44,7 +44,7 @@
     @apply cursor-none;
   }
   nav {
-    @apply text-[6.25rem];
+    @apply text-xl sm:text-10xl;
   }
   h1 {
     @apply typo-h1;
@@ -84,7 +84,7 @@
 
 @layer components {
   .typo-h1 {
-    @apply text-7xl 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
+    @apply text-4xl sm:text-7xl 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
   }
   .typo-h2 {
     @apply text-[54px]/[45px] font-bold;
