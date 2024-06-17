@@ -11,10 +11,10 @@
   animation: image-glitch-after 7s linear 0s infinite alternate-reverse;
 }
 .show-animation.image-animation--glitch:before {
-  @apply block opacity-70;
+  @apply block opacity-50;
 }
 .show-animation.image-animation--glitch:after {
-  @apply block opacity-90;
+  @apply block opacity-70;
 }
 
 @keyframes image-glitch-before {

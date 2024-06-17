@@ -9,7 +9,7 @@ const CustomCursor = ({ cursorState }) => {
   const cursor = useRef(null);
 
   const tlGrowth = useMemo(() => gsap.timeline(), []);
-  const tlinverse = useMemo(() => gsap.timeline(), []);
+  const tlInverse = useMemo(() => gsap.timeline(), []);
 
   let isGrowing = useMemo(
     () =>
@@ -39,12 +39,12 @@ const CustomCursor = ({ cursorState }) => {
       });
       tlGrowth.pause();
 
-      tlinverse.to(cursor.current, {
+      tlInverse.to(cursor.current, {
         attr: { stroke: 'none', fill: '#FFFFFF' },
         duration: 0.1,
         ease: 'linear',
       });
-      tlinverse.pause();
+      tlInverse.pause();
     },
     { scope: cursor, dependencies: [] },
   );
@@ -52,9 +52,9 @@ const CustomCursor = ({ cursorState }) => {
   useGSAP(
     () => {
       if (isBlendReversed) {
-        tlinverse.play();
+        tlInverse.play();
       } else {
-        tlinverse.reverse();
+        tlInverse.reverse();
       }
       if (isGrowing) {
         tlGrowth.play();

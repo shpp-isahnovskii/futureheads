@@ -9,10 +9,9 @@ const GlitchImage = ({ image, alt }) => {
   return (
     <>
       <div
-        className={`${image.pseudoAttr} image-animation--glitch ${animation}`}
+        className={`${image.pseudoAttr} before:bg-cover after:bg-cover relative image-animation--glitch ${animation}`}
       >
         <img
-          className="object-none"
           src={image.src}
           alt={alt}
           onMouseEnter={() => onMouseOverHandler(true)}

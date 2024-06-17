@@ -2,8 +2,10 @@ import { useState, useContext } from 'react';
 import ServiceListItem from './ServiceListItem';
 import ServiceListImage from './ServiceListImage';
 import CursorContext from '@/providers/CursorProvider';
+import useMediaQuery from '@/utils/useMediaQuery';
 
 const CompanyServices = () => {
+  const { media } = useMediaQuery();
   const { setCursorState } = useContext(CursorContext);
 
   const [activeService, setActiveService] = useState(0);
@@ -14,11 +16,11 @@ const CompanyServices = () => {
       image: {
         src: '/src/assets/images/development.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/development.webp')] after:content-[url('/src/assets/images/development.webp')]",
+          "before:bg-[url('/src/assets/images/development.webp')] after:bg-[url('/src/assets/images/development.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/development-num.png',
-        position: '-top-36 -right-[76px]',
+        position: '-top-8 lg:-top-36 lg:-right-16 w-16 sm:w-32 md:w-36 lg:w-48 xl:w-64',
       },
       alt: 'development',
     },
@@ -28,11 +30,11 @@ const CompanyServices = () => {
       image: {
         src: '/src/assets/images/design.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/design.webp')] after:content-[url('/src/assets/images/design.webp')]",
+          "before:bg-[url('/src/assets/images/design.webp')] after:bg-[url('/src/assets/images/design.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/design-num.png',
-        position: '-top-[140px] -right-[80px]',
+        position: '-top-4 lg:-top-36 xl:-top-[100px] lg:-right-12 xl:-right-[54px] w-20 sm:w-36 md:w-48 md:w-56 lg:w-[300px] xl:w-[420px]',
       },
       alt: 'design',
     },
@@ -42,11 +44,11 @@ const CompanyServices = () => {
       image: {
         src: '/src/assets/images/marketing.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/marketing.webp')] after:content-[url('/src/assets/images/marketing.webp')]",
+          "before:bg-[url('/src/assets/images/marketing.webp')] after:bg-[url('/src/assets/images/marketing.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/marketing-num.png',
-        position: '-top-32 -right-[142px]',
+        position: '-top-5 lg:-top-32 xl:-top-[120px] lg:-right-20 w-20 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[440px]',
       },
       alt: 'marketing',
     },
@@ -57,11 +59,11 @@ const CompanyServices = () => {
       image: {
         src: '/src/assets/images/consulting.webp',
         pseudoAttr:
-          "before:content-[url('/src/assets/images/consulting.webp')] after:content-[url('/src/assets/images/consulting.webp')]",
+          "before:bg-[url('/src/assets/images/consulting.webp')] after:bg-[url('/src/assets/images/consulting.webp')]",
       },
       imageNum: {
         src: '/src/assets/images/consulting-num.png',
-        position: '-top-[170px] -right-[76px]',
+        position: '-top-[1.62rem] lg:-top-[90px] xl:-top-[130px] lg:-right-10 xl:-right-[60px] w-20 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[460px]',
       },
       alt: 'consulting',
     },
@@ -69,27 +71,50 @@ const CompanyServices = () => {
 
   return (
     <>
-      <section className="flex relative h-screen w-[calc(100%-90px)] mx-auto">
-        <ul className="ml-48 z-20 max-w-[33%]">
-          {services.map((content, index) => (
-            <ServiceListItem
-              key={index}
-              isActiveService={index === activeService}
-              setActiveService={() => setActiveService(index)}
-              content={content}
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-            />
-          ))}
-        </ul>
-        <div className="absolute right-0 top-[-3rem] scale-[0.73] z-10">
-          {services.map((content, index) => (
-            <ServiceListImage
-              key={index}
-              isActiveService={index === activeService}
-              content={content}
-            />
-          ))}
+      <section className="flex h-screen pt-10 md:pt-0 md:px-7 lg:px-11 mx-auto">
+        <div className='relative w-full h-fit max-w-screen-2xl mx-auto'>
+          <ul className="mx-4 sm:mx-4 lg:mx-0 xl:ml-48 w-full md:max-w-[33%]">
+            {services.map((content, index) => (
+              <ServiceListItem
+                key={index}
+                isActiveService={index === activeService}
+                setActiveService={() => setActiveService(index)}
+                content={content}
+                onMouseEnter={() => setCursorState('circle-growth')}
+                onMouseLeave={() => setCursorState(undefined)}
+                className="h-32 mb-9 sm:h-44 md:h-32"
+              >
+                {media === 'mobile' && (
+                  <ServiceListImage
+                    className={`-top-1 right-8 ${
+                      index === activeService ? '' : 'grayscale'
+                    }`}
+                    key={index}
+                    isActiveService={index === activeService}
+                    content={content}
+                  />
+                )}
+                {/* <picture className="absolute top-0 right-0 w-36">
+                <source srcSet={content.image.src} media="(min-width: 320px)" />
+                <img src={content.image.src} alt={content.image.alt} />
+              </picture> */}
+              </ServiceListItem>
+            ))}
+          </ul>
+          {media !== 'mobile' && (
+            <div>
+              {services.map((content, index) => (
+                <ServiceListImage
+                  key={index}
+                  isActiveService={index === activeService}
+                  content={content}
+                  className={`top-1/2 -translate-y-1/2 right-5 md:right-10 ${
+                    index === activeService ? 'block' : 'hidden'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>

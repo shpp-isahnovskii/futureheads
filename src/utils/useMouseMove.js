@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 const useMouseMove = () => {
   const [position, setPosition] = useState({ x: 0, y: 0});
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handlerMouseMove = (event) => {
       setPosition({ x: event.clientX, y: event.clientY });
     };

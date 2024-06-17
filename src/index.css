@@ -35,7 +35,7 @@
     @apply font-gosha text-white bg-black;
   }
   body {
-    @apply overflow-x-clip cursor-none select-none;
+    @apply overflow-x-clip lg:cursor-none select-none;
   }
   body.no-scroll {
     @apply overflow-hidden;
@@ -44,7 +44,7 @@
     @apply cursor-none;
   }
   nav {
-    @apply text-xl sm:text-10xl;
+    @apply text-4xl md:text-6xl xl:text-10xl;
   }
   h1 {
     @apply typo-h1;
@@ -84,10 +84,10 @@
 
 @layer components {
   .typo-h1 {
-    @apply text-4xl sm:text-7xl 2xl:text-[80px]/[1] 3xl:text-[111px]/[1.03];
+    @apply text-4xl md:text-6xl lg:text-[80px]/[1];
   }
   .typo-h2 {
-    @apply text-[54px]/[45px] font-bold;
+    @apply text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold;
   }
 }
 

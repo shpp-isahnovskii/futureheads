@@ -17,12 +17,11 @@ export default {
         icons: ['SocialRegular'],
       },
       screens: {
-        //'sm': '640px',
-        //'md': '768px',
-        //'lg': '1024px',
-        //'xl': '1280px',
-        //'2xl': '1536px',
-        '3xl': '1800px',
+        // sm	640px	@media (min-width: 640px)
+        // md	768px	@media (min-width: 768px)
+        // lg	1024px	@media (min-width: 1024px)
+        // xl	1280px	@media (min-width: 1280px)
+        // 2xl	1536px	@media (min-width: 1536px)
       },
       animation: {
         'running-forward': 'forward-n-back 60s ease-in-out Infinite alternate',
@@ -39,8 +38,8 @@ export default {
         },
       },
       fontSize: {
-        '10xl': ['6.25rem', {lineHeight: '6.25rem'}]
-      }
+        '10xl': ['6.25rem', { lineHeight: '6.25rem' }],
+      },
     },
   },
   plugins: [

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState({
@@ -6,7 +6,7 @@ const useScreenSize = () => {
     height: window.innerHeight,
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handlerResize = () => {
       setScreenSize({ width: window.innerWidth, height: window.innerHeight });
     };

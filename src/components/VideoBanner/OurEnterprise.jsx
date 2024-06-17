@@ -1,38 +1,45 @@
 import GlitchText from '@/components/utils/glitch/text';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import useMediaQuery from '@/utils/useMediaQuery';
 
 const OurEnterprise = ({ isVideoEnded, className }) => {
-  useEffect(() => {
-    if (isVideoEnded) {
-      textBounceAnimation();
-      textMoveAnimation();
-    }
-  }, [isVideoEnded]);
-
-  const test = useRef(null);
+  const { media } = useMediaQuery();
+  const text = useRef(null);
   const tl = gsap.timeline();
 
+  useGSAP(
+    () => {
+      if (isVideoEnded && media !== 'mobile') {
+        textBounceAnimation();
+        textMoveAnimation();
+      }
+    },
+    { scope: text.current, dependencies: [isVideoEnded] },
+  );
+
   const textBounceAnimation = () => {
-    tl.to(test.current, { opacity: 1, duration: 0.01 });
-    tl.to(test.current, { scale: 0.3, duration: 0.01 }, '>');
-    tl.to(test.current, { scale: 1.2, duration: 0.1 }, '>');
-    tl.to(test.current, { scale: 0.9, duration: 0.1 }, '>');
-    tl.to(test.current, { scale: 1, duration: 0.1 }, '>');
+    tl.to(text.current, { opacity: 1, duration: 0.01 });
+    tl.to(text.current, { scale: 0.3, duration: 0.01 }, '>');
+    tl.to(text.current, { scale: 1.2, duration: 0.1 }, '>');
+    tl.to(text.current, { scale: 0.9, duration: 0.1 }, '>');
+    tl.to(text.current, { scale: 1, duration: 0.1 }, '>');
   };
 
   const textMoveAnimation = () => {
-    tl.to(test.current, {
+    tl.to(text.current, {
       transform: 'translateY(-100%)',
       top: '94vh',
       left: '2.75rem',
       duration: 2,
     });
   };
+
   return (
     <>
       <h1
-        ref={test}
+        ref={text}
         className={`opacity-0 flex flex-col font-bold text-black text-stroke absolute-center ${className}`}
       >
         <GlitchText>SOFTWARE</GlitchText>

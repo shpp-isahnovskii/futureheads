@@ -1,7 +1,7 @@
 .list-item--before {
-  @apply before:block before:absolute before:w-[calc(100%-80px)] before:sm:w-[1px] before:bg-white before:-left-16 before:h-[1px] before:sm:h-[calc(100%-80px)];
+  @apply before:block before:absolute before:md:w-[1px] before:bg-white md:before:-left-16 before:md:h-[calc(100%-80px)];
 }
 
 .list-item--after {
-  @apply after:block after:absolute after:w-[calc(100%+80px)] after:sm:w-[1px] after:-right-3 after:bg-white after:h-[1px] after:sm:h-[calc(100%+80px)];
+  @apply after:block after:absolute after:w-[calc(100%+20px)] after:md:w-[1px] md:after:-right-3 after:bg-white after:h-[1px] after:md:h-[calc(100%+80px)];
 }
