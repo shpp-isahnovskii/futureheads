@@ -10,11 +10,12 @@ const UploadFile = ({
   resetField,
   onMouseEnter,
   onMouseLeave,
+  className,
 }) => {
   const fileValue = watch(name);
   return (
     <>
-      <div className="flex relative">
+      <div className={`relative ${className}`}>
         <label
           htmlFor={id}
           onMouseEnter={onMouseEnter}

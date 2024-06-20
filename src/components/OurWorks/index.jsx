@@ -25,7 +25,7 @@ const OurWorks = () => {
   );
   return (
     <>
-      <section ref={container} className="h-screen overflow-hidden">
+      <section ref={container} className="h-svh overflow-hidden">
         <div className="w-full h-full">
           <img
             ref={ourWorksRef}

@@ -6,7 +6,7 @@ const VideoBanner = () => {
   const [isVideoEnded, setIsVideoEnded] = useState(false);
   return (
     <>
-      <section className="flex items-center relative w-full h-screen md:mb-32">
+      <section className="flex items-center relative w-full h-svh md:mb-32">
         <VideoOpener
           onVideoEnded={() => setIsVideoEnded(true)}
           className={isVideoEnded && 'opacity-0'}

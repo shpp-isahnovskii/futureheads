@@ -37,7 +37,7 @@ const ServiceListImage = ({ content, isActiveService, className }) => {
     <>
       <div
         ref={container}
-        className={`absolute w-48 sm:w-64 md:w-[26rem] lg:w-[38rem] xl:w-[54rem] -z-10 sm:z-10 ${className}`}
+        className={`absolute w-32 sm:w-64 md:w-[26rem] lg:w-[38rem] xl:w-[54rem] -z-10 sm:z-10 ${className}`}
       >
         <GlitchImage image={content.image} alt={content.alt} />
         <img

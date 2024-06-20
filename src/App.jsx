@@ -19,11 +19,11 @@ function App() {
       <HeaderComponent />
       <VideoBanner />
       <CompanyServices />
-      {/* <ScrollingText />
+      <ScrollingText />
       <OurWorks />
       <OurClients />
       <ContactForm />
-      <PageFooter /> */}
+      {/* <PageFooter /> */}
     </>
   );
 }

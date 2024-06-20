@@ -86,7 +86,7 @@ const ServiceListItem = ({
         <div className="relative z-20">
           <div ref={container}>
             <h2 className="w-fit">{content.service}</h2>
-            <div className="description font-gilroy text-sm md:text-lg lg:text-lg/[1.2] mt-1 sm:mt-3 w-[40%] md:w-[430px]">
+            <div className="description font-gilroy text-xs sm:text-sm md:text-lg lg:text-lg/[1.2] mt-1 sm:mt-3 w-[40%] sm:w-full md:w-[430px]">
               {content.description}
             </div>
           </div>

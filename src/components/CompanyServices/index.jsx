@@ -20,7 +20,7 @@ const CompanyServices = () => {
       },
       imageNum: {
         src: '/src/assets/images/development-num.png',
-        position: '-top-8 lg:-top-36 lg:-right-16 w-16 sm:w-32 md:w-36 lg:w-48 xl:w-64',
+        position: '-top-8 lg:-top-36 lg:-right-16 w-12 sm:w-32 md:w-36 lg:w-48 xl:w-64',
       },
       alt: 'development',
     },
@@ -34,7 +34,7 @@ const CompanyServices = () => {
       },
       imageNum: {
         src: '/src/assets/images/design-num.png',
-        position: '-top-4 lg:-top-36 xl:-top-[100px] lg:-right-12 xl:-right-[54px] w-20 sm:w-36 md:w-48 md:w-56 lg:w-[300px] xl:w-[420px]',
+        position: '-top-4 lg:-top-36 xl:-top-[100px] lg:-right-12 xl:-right-[54px] w-16 sm:w-36 md:w-48 md:w-56 lg:w-[300px] xl:w-[420px]',
       },
       alt: 'design',
     },
@@ -48,7 +48,7 @@ const CompanyServices = () => {
       },
       imageNum: {
         src: '/src/assets/images/marketing-num.png',
-        position: '-top-5 lg:-top-32 xl:-top-[120px] lg:-right-20 w-20 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[440px]',
+        position: '-top-5 lg:-top-32 xl:-top-[120px] lg:-right-20 w-16 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[440px]',
       },
       alt: 'marketing',
     },
@@ -63,7 +63,7 @@ const CompanyServices = () => {
       },
       imageNum: {
         src: '/src/assets/images/consulting-num.png',
-        position: '-top-[1.62rem] lg:-top-[90px] xl:-top-[130px] lg:-right-10 xl:-right-[60px] w-20 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[460px]',
+        position: '-top-[1.62rem] lg:-top-[90px] xl:-top-[130px] lg:-right-10 xl:-right-[60px] w-16 sm:w-36 md:w-48 md:w-56 lg:w-80 xl:w-[460px]',
       },
       alt: 'consulting',
     },
@@ -71,9 +71,9 @@ const CompanyServices = () => {
 
   return (
     <>
-      <section className="flex h-screen pt-10 md:pt-0 md:px-7 lg:px-11 mx-auto">
+      <section className="flex pt-10 md:pt-0 md:px-7 lg:px-11 mx-auto">
         <div className='relative w-full h-fit max-w-screen-2xl mx-auto'>
-          <ul className="mx-4 sm:mx-4 lg:mx-0 xl:ml-48 w-full md:max-w-[33%]">
+          <ul className="px-4 sm:px-4 lg:px-0 xl:ml-48 w-full md:max-w-[33%]">
             {services.map((content, index) => (
               <ServiceListItem
                 key={index}
@@ -82,11 +82,11 @@ const CompanyServices = () => {
                 content={content}
                 onMouseEnter={() => setCursorState('circle-growth')}
                 onMouseLeave={() => setCursorState(undefined)}
-                className="h-32 mb-9 sm:h-44 md:h-32"
+                className="h-24 mb-9 sm:h-44 md:h-32"
               >
                 {media === 'mobile' && (
                   <ServiceListImage
-                    className={`-top-1 right-8 ${
+                    className={`top-2 sm:-top-1 right-4 sm:right-8 ${
                       index === activeService ? '' : 'grayscale'
                     }`}
                     key={index}

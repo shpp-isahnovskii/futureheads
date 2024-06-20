@@ -48,13 +48,13 @@ const ScrollingText = () => {
 
   return (
     <>
-      <section className="h-screen text-[200px] font-bold leading-[1.1] [&>*:nth-child(odd)]:animation-running-text--forward [&>*:nth-child(even)]:animation-running-text--backward [&>*:nth-child(3)]:!animation-duration-[90s]">
+      <section className=" my-10 overflow-hidden text-5xl md:text-9xl lg:text-[200px] font-bold leading-[1.1] [&>*:nth-child(odd)]:animation-running-text--forward [&>*:nth-child(even)]:animation-running-text--backward [&>*:nth-child(3)]:!animation-duration-[90s]">
         {devTools.map((row, rowKey) => (
           <ul key={rowKey} className="flex w-fit">
             {row.map((listItem, key) => (
               <li
                 className={
-                  'text-nowrap text-stroke--bold hover:text-white text-black'
+                  'text-nowrap text-stroke md:text-stroke--bold hover:text-white text-black'
                 }
                 key={key}
               >

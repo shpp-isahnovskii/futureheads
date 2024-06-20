@@ -19,15 +19,15 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className="flex flex-wrap bg-white max-w-[calc(100%-90px)] m-auto text-black py-[270px] px-[130px]">
-        <h3 className="basis-full text-4xl leading-snug tracking-wide">
+      <section className="flex flex-wrap bg-white border-2 max-w-[calc(100%-32px)] sm:max-w-[calc(100%-90px)] m-auto text-black py-20 sm:py-36 xl:py-[270px] lg:px-14 xl:px-[130px] justify-center">
+        <h3 className="basis-full px-4 md:px-8 lg:px-0 text-3xl sm:text-4xl leading-snug tracking-wide max-w-7xl">
           Otherwise we can contact you! <br /> Just fill in your details and
           we&lsquo;ll respond in 24 hours.
         </h3>
-        <div className="flex justify-between w-full mt-20">
+        <div className="flex flex-col lg:flex-row justify-between w-full lg:mt-20 max-w-7xl">
           <form
             onSubmit={handleSubmit((data) => console.log(data))}
-            className="flex flex-wrap w-[760px] items-start"
+            className="flex flex-col lg:flex-row lg:flex-wrap w-full lg:w-[760px] items-start px-4 md:px-8 lg:px-0 [&>*]:w-full [&>*]:mt-10 lg:[&>*]:mt-0 mb-16"
           >
             <TextInput
               id="name"
@@ -74,29 +74,32 @@ const ContactForm = () => {
               disabled={isSubmitting}
               name="message"
               label="Message"
-              className="basis-full mt-10 mb-16"
+              className="basis-full mt-10 mb-4 lg:mb-16"
             />
-            <button
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-              type="submit"
-              className="px-8 py-5 border-2 border-black tracking-[0.2em] font-bold hover:bg-black hover:text-white transition-colors duration-300"
-              disabled={isSubmitting}
-            >
-              SEND MESSAGE
-            </button>
-            <UploadFile
-              onMouseEnter={() => setCursorState('circle-growth')}
-              onMouseLeave={() => setCursorState(undefined)}
-              id="file"
-              name="file"
-              register={register}
-              watch={watch}
-              resetField={resetField}
-              errors={errors}
-            />
+            <div className='flex flex-wrap'>
+              <button
+                onMouseEnter={() => setCursorState('circle-growth')}
+                onMouseLeave={() => setCursorState(undefined)}
+                type="submit"
+                className="w-full sm:w-auto px-8 py-5 border-2 border-black tracking-[0.2em] font-bold hover:bg-black hover:text-white transition-colors duration-300"
+                disabled={isSubmitting}
+              >
+                SEND MESSAGE
+              </button>
+              <UploadFile
+                className={'flex justify-center w-full mt-4 sm:mt-0 sm:w-auto'}
+                onMouseEnter={() => setCursorState('circle-growth')}
+                onMouseLeave={() => setCursorState(undefined)}
+                id="file"
+                name="file"
+                register={register}
+                watch={watch}
+                resetField={resetField}
+                errors={errors}
+              />
+            </div>
           </form>
-          <div className="w-[250px]">
+          <div className="px-4 md:px-8 lg:px-0 w-full lg:ml-10 xl:ml-0 lg:w-[250px]">
             <p className="mb-7">
               We are always happy to discuss Your ideas, products and projects!
             </p>
