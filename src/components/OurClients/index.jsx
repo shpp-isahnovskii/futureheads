@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import CursorContext from '@/providers/CursorProvider';
+import { getImgUrl } from '@/utils/getImgUrl';
 
 const OurClients = () => {
   const { setCursorState } = useContext(CursorContext);
@@ -22,10 +23,7 @@ const OurClients = () => {
                   : 'justify-center'
               }`}
             >
-              <img
-                src={`/src/assets/images/clients/${key}_logo.png`}
-                alt="logo"
-              />
+              <img src={getImgUrl(`clients/${key}_logo.png`)} alt="logo" />
             </figure>
           ))}
         </div>

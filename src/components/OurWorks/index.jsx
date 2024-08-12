@@ -1,6 +1,9 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { getImgUrl } from '@/utils/getImgUrl';
+
+import "./style.css";
 
 const OurWorks = () => {
   const timeline = gsap.timeline();
@@ -29,10 +32,9 @@ const OurWorks = () => {
         <div className="w-full h-full">
           <img
             ref={ourWorksRef}
-            src="/src/assets/images/our-works.webp"
-            className="object-cover relative w-full h-full"
+            src={getImgUrl('our-works.webp')}
+            className="object-cover relative w-full h-full img-mask pointer-events-none"
             style={{
-              maskImage: "url('/src/assets/images/our-works.svg')",
               maskSize: '98%',
               maskRepeat: 'no-repeat',
               maskPosition: 'center center',

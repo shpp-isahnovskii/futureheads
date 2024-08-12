@@ -11,13 +11,11 @@ const ServiceListImage = ({ content, isActiveService, className }) => {
   );
 
   useGSAP(() => {
+    gsap.set(container.current, { translateY: '-50%', top: '50%' });
+
     timeline
       .addLabel('mainTL')
-      .to(
-        container.current,
-        { opacity: 1, duration: '0.4' },
-        'mainTL',
-      )
+      .to(container.current, { opacity: 1, duration: '0.4' }, 'mainTL')
       .to(container.current, { scale: 1.02, duration: '0.2' }, 'mainTL')
       .to(container.current, { scale: 1, duration: '0.2' }, '>');
   });
@@ -37,7 +35,7 @@ const ServiceListImage = ({ content, isActiveService, className }) => {
     <>
       <div
         ref={container}
-        className={`absolute w-32 sm:w-64 md:w-[26rem] lg:w-[38rem] xl:w-[54rem] -z-10 sm:z-10 ${className}`}
+        className={`absolute w-32 sm:w-64 md:w-[26rem] lg:w-[38rem] xl:w-[46rem] 2xl:w-[54rem] -z-10 sm:z-10 ${className}`}
       >
         <GlitchImage image={content.image} alt={content.alt} />
         <img
