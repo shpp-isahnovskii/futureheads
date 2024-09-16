@@ -62,8 +62,8 @@ const PageFooter = () => {
             <p className="mb-7">
               We are always happy to discuss Your ideas, products and projects!
             </p>
-            <a href="tel:+380990667188" className="block font-bold mb-1">
-              +38 099 066 71 88
+            <a href="tel:+33333333333" className="block font-bold mb-1">
+              +33 333 333 33 33
             </a>
             <a
               href="mailto:tomorrowheads@gmail.com"
