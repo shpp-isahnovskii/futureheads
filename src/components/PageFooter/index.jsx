@@ -66,10 +66,10 @@ const PageFooter = () => {
               +33 333 333 33 33
             </a>
             <a
-              href="mailto:tomorrowheads@gmail.com"
+              href="mailto:test@gmail.com"
               className="block font-bold mb-1"
             >
-              tomorrowheads@gmail.com
+              test@gmail.com
             </a>
             <p className="font-bold mb-6">Kyiv, Ukraine</p>
             <CustomSocialList className="justify-end *:ml-5" />
